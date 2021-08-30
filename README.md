@@ -1,5 +1,9 @@
 # whitelab slides
 
+Build on [reveal.js](https://revealjs.com/), so check-out their demo. 
+
+## Install
+
 Make sure you have node installed. Then
 
 ```sh
