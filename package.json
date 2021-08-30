@@ -1,0 +1,28 @@
+{
+  "name": "whitelab-slides",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ur-whitelab/whitelab-slides.git"
+  },
+  "description": "white lab slides",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "watch": "parcel watch src/mov/*.mp4 src/img/*.jpg src/img/*.png  src/index.html --no-autoinstall",
+    "serve": "serve dist",
+    "start": "run-p watch serve",
+    "build-prod": "parcel build src/mov/*.mp4 src/img/*.jpg src/img/*.png  src/index.html --public-url ./"
+  },
+  "keywords": [],
+  "author": "Andrew White",
+  "devDependencies": {
+    "@parcel/transformer-image": "^2.0.0-rc.0"
+  },
+  "dependencies": {
+    "http-server": "^13.0.1",
+    "npm-run-all": "^4.1.5",
+    "parcel": "^2.0.0-rc.0",
+    "reveal.js": "^4.1.3",
+    "serve": "^12.0.0"
+  }
+}
