@@ -5,7 +5,18 @@ import RevealHighlight from 'reveal.js/plugin/highlight/highlight.esm.js';
 import Math from 'reveal.js/plugin/math/math.esm.js';
 
 
-footer_hider = (event) => {
+let deck = new Reveal({
+    plugins: [Markdown, Notes, RevealHighlight, Math],
+    navigationMode: 'linear',
+    center: false,
+    history: true,
+    progress: true
+
+})
+deck.initialize();
+
+
+function footerHider(event) {
 
     var a = event.currentSlide.attributes.getNamedItem('hide-footer');
 
@@ -17,10 +28,4 @@ footer_hider = (event) => {
 }
 
 
-let deck = new Reveal({
-    plugins: [Markdown, Notes, RevealHighlight, Math],
-    navigationMode: 'linear'
-
-})
-deck.initialize();
-deck.addEventListener('slidechanged', footer_hider);
+deck.addEventListener('slidechanged', footerHider);
